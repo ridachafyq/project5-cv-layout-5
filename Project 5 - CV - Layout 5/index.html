@@ -1,0 +1,221 @@
+
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Magazine CV – Two-Column Newspaper Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="wrap">
+    <header class="masthead" id="head">
+      <div class="mast">
+        <div class="avatar">
+          <img src="images/MyImage.jpg" alt="Your Name portrait" loading="lazy" />
+        </div>
+        <div>
+          <div class="title">
+            <h1>YOUR NAME</h1>
+            <p>Front-End Developer • UI Engineer • Design Systems</p>
+          </div>
+          <div class="meta">
+            <span class="tag">Amman, Jordan</span>
+            <span class="tag">you@example.com</span>
+            <a class="tag" href="#">Portfolio</a>
+            <a class="tag" href="#">LinkedIn</a>
+            <a class="tag" href="#">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="frame">
+      <!-- ============================================================
+           LEFT RAIL (click a year to jump to that experience section)
+           Uses :has(:target) to style the active year chip.
+      ============================================================= -->
+      <aside class="rail" aria-label="Year rail + links">
+        <div class="years">
+          <p class="year"><span class="dot"></span><a class="year-link" href="#y2025">2025</a></p>
+          <p class="year"><span class="dot"></span><a class="year-link" href="#y2024">2024</a></p>
+          <p class="year"><span class="dot"></span><a class="year-link" href="#y2023">2023</a></p>
+          <p class="year"><span class="dot"></span><a class="year-link" href="#y2022">2022</a></p>
+        </div>
+        <div class="links" aria-label="Quick links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+        </div>
+      </aside>
+
+      <!-- ============================================================
+           CONTENT COLUMN
+           About, Experience, Skills, Projects, Education.
+      ============================================================= -->
+      <section aria-label="Content column">
+        <!-- ABOUT -->
+        <article id="about" class="section card" aria-labelledby="about-title">
+          <h2 id="about-title">About</h2>
+          <p class="lead">Impact-driven builder of fast, accessible UIs. I care about design tokens, clean semantics,
+            and performance budgets. I enjoy mentoring and teaching front-end fundamentals to help teams move quickly
+            with quality.</p>
+        </article>
+
+        <!-- EXPERIENCE
+             Each year block has an id (#y2025, #y2024…) so the rail can link to it. -->
+        <article class="section card" aria-labelledby="exp-title">
+          <h2 id="exp-title">Experience</h2>
+
+          <div class="exp">
+            <!-- 2025 -->
+            <div class="job" id="y2025" aria-labelledby="y2025-title">
+              <div style="display:flex; gap:12px; align-items:baseline; flex-wrap: wrap;">
+                <div class="role" id="y2025-title">Lead Front-End Engineer</div>
+                <div class="where">Atlas Systems • Amman</div>
+                <div class="when">2025</div>
+              </div>
+              <ul class="muted">
+                <li>Shipped a design-token pipeline (Style Dictionary) that unified 3 products; reduced CSS drift by
+                  40%.</li>
+                <li>Migrated legacy CSS to CSS Grid/Flex patterns; cut layout bugs across viewports by ~60%.</li>
+                <li>Championed performance budgets; improved median LCP from 3.3s → 2.2s on mid-range devices.</li>
+              </ul>
+              <p><a href="#about">↑ Back to top</a></p>
+            </div>
+
+            <!-- 2024 -->
+            <div class="job" id="y2024" aria-labelledby="y2024-title">
+              <div style="display:flex; gap:12px; align-items:baseline; flex-wrap: wrap;">
+                <div class="role" id="y2024-title">Senior Front-End Developer</div>
+                <div class="where">Tech Co • Amman</div>
+                <div class="when">2023 — 2024</div>
+              </div>
+              <ul class="muted">
+                <li>Built an internal component library; trimmed CSS bundle by 30% using tokens and utility classes.
+                </li>
+                <li>Led a11y upgrades to WCAG 2.1 AA; authored checklists and example PRs for the team.</li>
+                <li>Partnered with Design to improve Figma → code handoff; reduced rework and improved consistency.</li>
+              </ul>
+              <p><a href="#about">↑ Back to top</a></p>
+            </div>
+
+            <!-- 2023 -->
+            <div class="job" id="y2023" aria-labelledby="y2023-title">
+              <div style="display:flex; gap:12px; align-items:baseline; flex-wrap: wrap;">
+                <div class="role" id="y2023-title">Web Designer</div>
+                <div class="where">Creative Studio • Remote</div>
+                <div class="when">2020 — 2023</div>
+              </div>
+              <ul class="muted">
+                <li>Prototyped and shipped 12 marketing sites with modern CSS; introduced shared brand tokens.</li>
+                <li>Delivered semantic HTML/CSS handoffs that accelerated dev sprints by ~20%.</li>
+              </ul>
+              <p><a href="#about">↑ Back to top</a></p>
+            </div>
+
+            <!-- 2022 -->
+            <div class="job" id="y2022" aria-labelledby="y2022-title">
+              <div style="display:flex; gap:12px; align-items:baseline; flex-wrap: wrap;">
+                <div class="role" id="y2022-title">Volunteer Mentor</div>
+                <div class="where">Local Coding Club</div>
+                <div class="when">2022 — Present</div>
+              </div>
+              <ul class="muted">
+                <li>Weekly workshops helping beginners ship their first pages using semantic HTML and modern CSS.</li>
+                <li>Reviewed student projects; introduced accessible patterns and responsive techniques.</li>
+              </ul>
+              <p><a href="#head">↑ Back to top</a></p>
+            </div>
+          </div>
+        </article>
+
+        <!-- SKILLS -->
+        <article id="skills" class="section card" aria-labelledby="skills-title">
+          <h2 id="skills-title">Skills & Tools</h2>
+          <div class="skills">
+            <span class="tag">Semantic HTML</span>
+            <span class="tag">CSS Grid & Flexbox</span>
+            <span class="tag">Accessibility (WCAG)</span>
+            <span class="tag">Design Tokens</span>
+            <span class="tag">Git & GitHub</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Chrome DevTools</span>
+          </div>
+        </article>
+
+        <!-- PROJECTS -->
+        <article id="projects" class="section card" aria-labelledby="proj-title">
+          <h2 id="proj-title">Selected Projects</h2>
+          <div class="projects">
+            <div class="proj">
+              <h3>Portfolio Website</h3>
+              <p class="muted">Static site scoring 95+ on Lighthouse Performance; optimized fonts & images; CI/CD
+                previews for PRs.</p>
+            </div>
+            <div class="proj">
+              <h3>Design System Demo</h3>
+              <p class="muted">Token-based theming with CSS variables; documented components with usage guidelines.</p>
+            </div>
+            <div class="proj">
+              <h3>Perf Budgets Kit</h3>
+              <p class="muted">Starter budgets, bundle limits, and checklists to keep teams honest as products scale.
+              </p>
+            </div>
+            <div class="proj">
+              <h3>A11y Audit Toolkit</h3>
+              <p class="muted">Keyboard flows, color contrast testing, and heuristics to drive WCAG 2.1 AA improvements.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- EDUCATION -->
+        <article id="education" class="section card">
+          <h2>Education</h2>
+          <div class="edu-list">
+
+            <div class="edu-item">
+              <div class="edu-header">
+                <h3 class="edu-degree">B.Sc. Computer Science</h3>
+                <span class="edu-years">2016 — 2020</span>
+              </div>
+              <div class="edu-institution">University Name</div>
+              <p class="edu-highlights muted">
+                Graduated with Honors. Focused on software engineering, data structures, and algorithms.
+              </p>
+            </div>
+
+            <div class="edu-item">
+              <div class="edu-header">
+                <h3 class="edu-degree">M.Sc. Information Technology</h3>
+                <span class="edu-years">2021 — 2023</span>
+              </div>
+              <div class="edu-institution">Tech Institute</div>
+              <p class="edu-highlights muted">
+                Specialized in cloud computing and modern web application development.
+              </p>
+            </div>
+
+            <div class="edu-item">
+              <div class="edu-header">
+                <h3 class="edu-degree">Front-End Web Development Certification</h3>
+                <span class="edu-years">2023</span>
+              </div>
+              <div class="edu-institution">Online Academy</div>
+              <p class="edu-highlights muted">
+                Completed intensive bootcamp covering HTML5, CSS3, JavaScript, and React.
+              </p>
+            </div>
+
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>
